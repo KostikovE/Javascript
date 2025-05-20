@@ -9,11 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 20px;
             line-height: 1.6;
-            background:url('kovrik.jpg')
+            background:url('patek.svg')
         }
        h1{
            font-weight: 700;
-            font-size: 9.5rem;
+            font-size: 2.5rem;
             color: #212529;
        }
         .container {
@@ -60,6 +60,7 @@
         .img{
             width:200px;
             display: block;
+            align:center;
         }
     </style>
 </head>
@@ -79,17 +80,16 @@
                         <label for="male">Мужской</label>
                         <input type="radio" id="male" name="gender" value="male" required>
                     </div>
-                    <div class ="Kartinka">
-                          <img src="granny.jpg" alt="Babka" class="img">
+
                         
-                    </div>
+                    
                     <div class="radio-option">
                         <label for="female">Женский</label>
                         <input type="radio" id="female" name="gender" value="female">
                     </div>
                 </div>
             </div>
-
+                    
             <button type="button" id="calculateBtn">Рассчитать</button>
         </form>
         
@@ -98,7 +98,9 @@
             <textarea id="result" readonly></textarea>
         </div>
     </div>
-
+        <div class ="Kartinka">
+            <img src="granny.jpg" alt="Babka" class="img">
+        </div>
     <script>
         'use strict';
 
