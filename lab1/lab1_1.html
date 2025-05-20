@@ -11,7 +11,11 @@
             line-height: 1.6;
             background:url('KOVER.jpg')
         }
-       
+       h1{
+           font-weight: 700;
+            font-size: 1.5rem;
+            color: #212529;
+       }
         .container {
             max-width: 400px;
             margin: 0 auto;
@@ -53,6 +57,10 @@
         .radio-option {
             margin: 5px 0;
         }
+        .img{
+            width:200px;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -63,13 +71,17 @@
                 <label for="age">Возраст:</label>
                 <input type="number" id="age" name="age" min="0" required>
             </div>
-
+            
             <div class="form-group">
                 <label>Пол:</label>
                 <div class="radio-group">
                     <div class="radio-option">
                         <label for="male">Мужской</label>
                         <input type="radio" id="male" name="gender" value="male" required>
+                    </div>
+                    <div class ="Kartinka">
+                          <img src="granny.jpg" alt="Babka" class="img">
+                        
                     </div>
                     <div class="radio-option">
                         <label for="female">Женский</label>
