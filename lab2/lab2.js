@@ -14,3 +14,12 @@ function pow(x, n) {
     }
     return result;
 }
+
+/**
+    * Вычисляет сумму чисел от 1 до n включительно.
+    * @param {number} n - натуральное число
+    * @returns {number} Сумма чисел от 1 до n.
+    */
+function sumTo(n){
+    return n*(n+1)/2;
+}
