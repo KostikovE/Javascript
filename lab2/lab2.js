@@ -60,3 +60,35 @@ function fib(n) {
     }
     return b;
 }
+
+/**
+ * Возвращает функцию, которая сравнивает свой аргумент с x.
+ * @param {number} x - Число для сравнения.
+ * @returns {function} Функция, которая принимает y и сравнивает его с x.
+ */
+function compare(x) {
+    return function(y) {
+        if (y > x) return true;
+        if (y < x) return false;
+        return null;
+    };
+}
+
+/**
+ * Возвращает сумму всех переданных аргументов.
+ * @param {...number} args - Числа для суммирования.
+ * @returns {number} Сумма всех аргументов.
+ */
+function sum(...args) {
+    return args.reduce((total, current) => total + current, 0);
+}
+
+/**
+ * Добавляет символьное свойство blackSpot со значением true к переданному объекту.
+ * @param {Object} obj - Объект для модификации.
+ * @returns {Object} Исходный объект с добавленным свойством blackSpot.
+ */
+function addBlackSpot(obj) {
+    obj[Symbol.for("blackSpot")] = true;
+    return obj;
+}
