@@ -23,3 +23,22 @@ function pow(x, n) {
 function sumTo(n){
     return n*(n+1)/2;
 }
+
+/**
+ * Проверяет год на високосность.
+ * @param {number} year - Год для проверки.
+ * @returns {boolean} true, если год високосный, иначе false.
+ */
+function isLeapYear(year) {
+    return (year % 400 === 0) || (year % 100 !== 0 && year % 4 === 0);
+}
+
+/**
+ * Возвращает факториал числа n (n!).
+ * @param {number} n - Число для вычисления факториала.
+ * @returns {bigint} Факториал числа n в виде BigInt.
+ */
+function factorial(n) {
+    if (n === 0) return 1n;
+    return BigInt(n) * factorial(n - 1);
+}
