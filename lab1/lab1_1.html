@@ -105,7 +105,14 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             const calculateBtn = document.getElementById('calculateBtn');
+            const pensionForm = document.getElementById('pensionForm');
+            
             calculateBtn.addEventListener('click', calculatePension);
+
+            pensionForm.addEventListener('submit',function(e)){
+                e.preventDefault();
+                calculatePension();
+            });
         });
 
         function calculatePension() {
