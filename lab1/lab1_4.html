@@ -26,7 +26,7 @@
         <form id="primeForm">
             <label for="n">Введите значение n:</label>
             <input type="number" id="n" name="n" min="2" required><br><br>
-            <button type="button" onclick="findPrimes()">Найти</button>
+            <button type="button" id="findButton">Найти</button>
         </form>
         <div id="result"></div>
     </div>
@@ -61,6 +61,17 @@
             }
             return true;
         }
+
+       
+        document.getElementById('findButton').addEventListener('click', findPrimes);
+        
+        
+        document.getElementById('n').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); 
+                findPrimes();
+            }
+        });
     </script>
 </body>
 </html>
