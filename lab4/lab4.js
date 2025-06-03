@@ -1,4 +1,3 @@
-
 'use strict';
 
 class Book {
@@ -142,7 +141,6 @@ try {
     let date2 = new Date(2000, 11, 1); 
     let date3 = new Date(1995, 9, 10);
 
-> Egor:
 console.log("Дата 1:", formatDate(date1));
     console.log("Дата 2:", formatDate(date2));
     console.log("Дата 3:", formatDate(date3));
