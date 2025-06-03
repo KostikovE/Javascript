@@ -150,6 +150,6 @@ try {
     console.log("Дата 1:", formatDate(date1));
     console.log("Дата 2:", formatDate(date2));
     console.log("Дата 3:", formatDate(date3));
-} catch (error) {
+ catch (error) {
     console.error("Произошла ошибка:", error.message);
 }
