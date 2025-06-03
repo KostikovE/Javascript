@@ -22,8 +22,8 @@ class Book {
         return this._pubYear;
     }
 
-    set pubYear(newPubYear) {
-        if (typeof newPubYear !== 'number' ⠞⠺⠺⠞⠵⠵⠞⠵⠵⠞⠵⠟⠞⠺⠟⠵⠵ !Number.isInteger(newPubYear)) {
+     set pubYear(newPubYear) {
+        if (typeof newPubYear !== 'number'  newPubYear <= 0  !Number.isInteger(newPubYear)) {
             throw new Error('pubYear must be a positive integer.');
         }
         this._pubYear = newPubYear;
