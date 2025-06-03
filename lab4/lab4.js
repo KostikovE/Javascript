@@ -1,3 +1,4 @@
+> Egor:
 'use strict';
 
 class Book {
@@ -23,7 +24,7 @@ class Book {
     }
 
     set pubYear(newPubYear) {
-        if (typeof newPubYear !== 'number' || newPubYear <= 0 || !Number.isInteger(newPubYear)) {
+        if (typeof newPubYear !== 'number' ⠞⠺⠺⠞⠵⠵⠞⠵⠵⠞⠵⠟⠞⠺⠟⠵⠵ !Number.isInteger(newPubYear)) {
             throw new Error('pubYear must be a positive integer.');
         }
         this._pubYear = newPubYear;
@@ -41,9 +42,9 @@ class Book {
     }
 
     show() {
-        console.log(`Название: ${this._title},
+        console.log(Название: ${this._title},
 Год публикации: ${this._pubYear},
-Цена: ${this._price}`);
+Цена: ${this._price});
     }
 
     static compare(book1, book2) {
@@ -71,7 +72,6 @@ try {
         books[i].show();
     }
 
-
     function isEmpty(obj) {
         if (typeof obj !== 'object' || obj === null) return true;
 
@@ -86,8 +86,6 @@ try {
 
     console.log("Объект 1", isEmpty(obj1));
     console.log("Объект 2", isEmpty(obj2));
-
-
 
     let classObject = {
         className: "open menu",
@@ -119,13 +117,11 @@ try {
     classObject.removeClass('menu');
     console.log("className после removeClass('menu'):", classObject.className);
 
-
     let jsonString = JSON.stringify(classObject, null, 2);
     console.log("JSON строка:", jsonString);
 
     let object2 = JSON.parse(jsonString);
     console.log('Сравнение объектов из JSON:', JSON.stringify(object2) === JSON.stringify(classObject));
-
 
     function getSecondsToday() {
         let now = new Date();
@@ -135,21 +131,21 @@ try {
 
     console.log("Секунд с начала дня: ", getSecondsToday());
 
-
     function formatDate(date) {
-        const day = String(date.getDate()).padStart(2,'0');
-        const month = String(date.getMonth() + 1).padStart(2,'0');
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
         const year = date.getFullYear();
-        return `${day}.${month}.${year}`;
+        return ${day}.${month}.${year};
     }
 
     let date1 = new Date(2024, 0, 20); 
     let date2 = new Date(2000, 11, 1); 
-    let date3 = new Date(1995, 9, 10); 
+    let date3 = new Date(1995, 9, 10);
 
-    console.log("Дата 1:", formatDate(date1));
+> Egor:
+console.log("Дата 1:", formatDate(date1));
     console.log("Дата 2:", formatDate(date2));
     console.log("Дата 3:", formatDate(date3));
- catch (error) {
+} catch (error) {
     console.error("Произошла ошибка:", error.message);
 }
