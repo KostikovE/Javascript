@@ -1,4 +1,4 @@
-> Egor:
+
 'use strict';
 
 class Book {
