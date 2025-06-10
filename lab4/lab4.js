@@ -59,7 +59,7 @@ class Book {
  */
 function formatDate(date) {
     // Получаем компоненты даты
-    const year = date.getFullYear();
+    const year = String(date.getFullYear()).slice(-2);
     // Месяцы в JavaScript начинаются с 0 (январь = 0), поэтому добавляем 1
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
@@ -158,9 +158,9 @@ try {
 
     console.log("Секунд с начала дня: ", getSecondsToday());
 
-    let date1 = new Date(24, 0, 20); 
+    let date1 = new Date(2024, 0, 20); 
     let date2 = new Date(2000, 11, 1); 
-    let date3 = new Date(95, 9, 10); 
+    let date3 = new Date(1995, 9, 10); 
 
     console.log("Дата 1:", formatDate(date1));  
     console.log("Дата 2:", formatDate(date2));  
