@@ -5,43 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Скрыть и показать текст</title>
     <style>
+        #text-container {
+            min-height: 1.2em; /* Фиксированная высота под текст */
+            margin: 20px 0;
+        }
         #text {
             font-size: 20px;
-            margin: 20px 0;
-            visibility: visible;
-            height:auto;
-            transition: visibility 0.3s, height 0.3s;
-            
         }
-        #text.hidden{
-            visibility:hidden;
-            height:0;
-            width:0;
-
         #toggleButton {
-            min-width: 120px;
-            padding:5px 10px;
+            width: 140px; /* Фиксированная ширина для обоих состояний */
+            text-align: center;
+            padding: 5px 10px;
             box-sizing: border-box;
-            text-align:center;
+        }
+        .hidden {
+            visibility: hidden;
         }
     </style>
 </head>
 <body>
 
-<div id="text">Текст.</div>
+<div id="text-container">
+    <span id="text">Текст.</span>
+</div>
 <button id="toggleButton">Скрыть текст</button>
 
 <script>
     const textElement = document.getElementById('text');
     const toggleButton = document.getElementById('toggleButton');
     toggleButton.addEventListener('click', function() {
-        if (textElement.style.display === 'none') {
-            textElement.style.display = 'block';
-            toggleButton.textContent = 'Скрыть текст';
-        } else {
-            textElement.style.display = 'none';
-            toggleButton.textContent = 'Показать текст';
-        }
+        textElement.classList.toggle('hidden');
+        toggleButton.textContent = textElement.classList.contains('hidden') 
+            ? 'Показать текст' 
+            : 'Скрыть текст';
     });
 </script>
 
