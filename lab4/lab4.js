@@ -159,7 +159,7 @@ try {
     console.log("Секунд с начала дня: ", getSecondsToday());
 
     let date1 = new Date(24, 0, 20); 
-    let date2 = new Date(00, 11, 1); 
+    let date2 = new Date(2000, 11, 1); 
     let date3 = new Date(95, 9, 10); 
 
     console.log("Дата 1:", formatDate(date1));  
