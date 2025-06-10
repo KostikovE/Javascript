@@ -75,11 +75,13 @@ function formatDate(date) {
  */
 function isEmpty(obj) {
     if (typeof obj !== 'object' || obj === null) return true;
-
-    for (let key in obj) {
-        if (obj.hasOwnProperty(key)) return false;
-    }
-    return Object.getOwnPropertySymbols(obj).length === 0;
+   
+    if (Object.getOwnPropertyNames(obj).length > 0) return false;
+    
+  
+    if (Object.getOwnPropertySymbols(obj).length > 0) return false;
+    
+    return true;
 }
 
 /**
@@ -156,13 +158,13 @@ try {
 
     console.log("Секунд с начала дня: ", getSecondsToday());
 
-    let date1 = new Date(2024, 0, 20); 
-    let date2 = new Date(2000, 11, 1); 
-    let date3 = new Date(1995, 9, 10); 
+    let date1 = new Date(24, 0, 20); 
+    let date2 = new Date(00, 11, 1); 
+    let date3 = new Date(95, 9, 10); 
 
-    console.log("Дата 1:", formatDate(date1));  // 2024.01.20
-    console.log("Дата 2:", formatDate(date2));  // 2000.12.01
-    console.log("Дата 3:", formatDate(date3));  // 1995.10.10
+    console.log("Дата 1:", formatDate(date1));  
+    console.log("Дата 2:", formatDate(date2));  
+    console.log("Дата 3:", formatDate(date3));  
 } catch (error) {
     console.error("Произошла ошибка:", error.message);
 }
