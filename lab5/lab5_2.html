@@ -8,7 +8,15 @@
         #text {
             font-size: 20px;
             margin: 20px 0;
+            visibility: visible;
+            height:auto;
+            transition: visibility 0.3s, height 0.3s;
+            
         }
+        #text.hidden{
+            visibility:hidden;
+            height:0;
+            width:0;
 
         #toggleButton {
             min-width: 120px;
