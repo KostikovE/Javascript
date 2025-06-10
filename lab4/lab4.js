@@ -113,7 +113,7 @@ try {
     }
 
     let obj1 = { [Symbol()]: true };
-    let obj2 = {};
+    let obj2 = Object.defineProperty({}, 'name', { value: 'John', });
 
     console.log("Объект 1", isEmpty(obj1));
     console.log("Объект 2", isEmpty(obj2));
